@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class EvalVisitor extends ExprBaseVisitor<Integer> {
 
-    Map<String, Integer> memory = new HashMap<String, Integer>();
+    Map<String, Integer> memory = new HashMap<>();
 
     @Override
     public Integer visitPrintExpr(ExprParser.PrintExprContext ctx) {
