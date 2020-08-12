@@ -618,7 +618,7 @@ index_partitioning_clause
     ;
 
 local_partitioned_index
-    : LOCAL (on_range_partitioned_table
+    : LOCAL ( on_range_partitioned_table
             | on_list_partitioned_table
             | on_hash_partitioned_table
             | on_comp_partitioned_table
@@ -2009,6 +2009,7 @@ physical_attributes_clause
     : (PCTFREE pctfree=UNSIGNED_INTEGER
       | PCTUSED pctused=UNSIGNED_INTEGER
       | INITRANS inittrans=UNSIGNED_INTEGER
+      | MAXTRANS maxtrant=UNSIGNED_INTEGER
       | storage_clause
       )+
     ;
