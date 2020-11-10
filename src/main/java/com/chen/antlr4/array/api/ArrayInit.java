@@ -3,8 +3,8 @@ package com.chen.antlr4.array.api;
 import com.chen.antlr4.array.parser.ArrayInitLexer;
 import com.chen.antlr4.array.parser.ArrayInitParser;
 import com.chen.antlr4.array.service.Int2UnicodeString;
+import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
-import org.antlr.v4.runtime.CodePointCharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
@@ -18,7 +18,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 public class ArrayInit {
 
     public static void print(String str) {
-        CodePointCharStream input = CharStreams.fromString(str);
+        CharStream input = CharStreams.fromString(str);
         ArrayInitLexer lexer = new ArrayInitLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         ArrayInitParser parser = new ArrayInitParser(tokens);
