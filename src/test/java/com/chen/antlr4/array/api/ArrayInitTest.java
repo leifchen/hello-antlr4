@@ -2,8 +2,6 @@ package com.chen.antlr4.array.api;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 /**
  * ArrayInitTest
  * <p>

@@ -1,12 +1,10 @@
 grammar ArrayInit;
 
-init
-    : '{' value (',' value)* '}' ;
+init : '{' value (',' value)* '}' ;
 
-value
-    : init
-    | INT
-    ;
+value : init
+      | INT
+      ;
 
-INT: [0-9]+ ;
-WS: [ \t\r\n]+ -> skip ;
+INT : [0-9]+ ;
+WS  : [ \t\r\n]+ -> skip ;

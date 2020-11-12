@@ -2,7 +2,6 @@ package com.chen.antlr4.array.service;
 
 import com.chen.antlr4.array.parser.ArrayInitBaseListener;
 import com.chen.antlr4.array.parser.ArrayInitParser;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * Int整数转换成十六进制的String
@@ -10,7 +9,7 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  * @Author LeifChen
  * @Date 2020-03-26
  */
-public class Int2UnicodeString extends ArrayInitBaseListener implements ParseTreeListener {
+public class Int2UnicodeString extends ArrayInitBaseListener {
     @Override
     public void enterInit(ArrayInitParser.InitContext ctx) {
         System.out.print('"');
