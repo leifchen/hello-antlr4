@@ -21,8 +21,12 @@ import java.io.IOException;
  */
 public class ExtractInterfaceTool {
 
-    public static void print() throws IOException {
+    public static void main(String[] args) throws IOException {
         File file = new File("src/main/resources/sample/Demo.java");
+        ExtractInterfaceTool.print(file);
+    }
+
+    public static void print(File file) throws IOException {
         CharStream input = CharStreams.fromStream(new FileInputStream(file));
 
         JavaLexer lexer = new JavaLexer(input);
