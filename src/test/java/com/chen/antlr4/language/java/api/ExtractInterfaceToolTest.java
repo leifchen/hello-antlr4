@@ -14,13 +14,6 @@ class ExtractInterfaceToolTest {
 
     @Test
     void print() throws IOException {
-        String str = "import java.util.List;\n" +
-                "import java.util.Map;\n" +
-                "public class Demo {\n" +
-                "\tvoid f(int x, String y) { }\n" +
-                "\tint[ ] g(/*no args*/) { return null; }\n" +
-                "\tList<Map<String, Integer>>[] h() { return null; }\n" +
-                "}\n";
         ExtractInterfaceTool.print();
     }
 }
