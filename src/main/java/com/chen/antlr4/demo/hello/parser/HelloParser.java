@@ -1,18 +1,17 @@
-// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo\Hello.g4 by ANTLR 4.7.2
+// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo/Hello.g4 by ANTLR 4.13.1
 package com.chen.antlr4.demo.hello.parser;
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.TerminalNode;
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
+import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class HelloParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -90,6 +89,7 @@ public class HelloParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class RContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(HelloParser.ID, 0); }
 		public RContext(ParserRuleContext parent, int invokingState) {
@@ -130,9 +130,10 @@ public class HelloParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\5\b\4\2\t\2\3\2\3"+
-		"\2\3\2\3\2\2\2\3\2\2\2\2\6\2\4\3\2\2\2\4\5\7\3\2\2\5\6\7\4\2\2\6\3\3\2"+
-		"\2\2\2";
+		"\u0004\u0001\u0003\u0006\u0002\u0000\u0007\u0000\u0001\u0000\u0001\u0000"+
+		"\u0001\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0004\u0000"+
+		"\u0002\u0001\u0000\u0000\u0000\u0002\u0003\u0005\u0001\u0000\u0000\u0003"+
+		"\u0004\u0005\u0002\u0000\u0000\u0004\u0001\u0001\u0000\u0000\u0000\u0000";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

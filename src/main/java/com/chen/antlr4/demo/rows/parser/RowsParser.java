@@ -1,20 +1,17 @@
-// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo\Rows.g4 by ANTLR 4.7.2
+// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo/Rows.g4 by ANTLR 4.13.1
 package com.chen.antlr4.demo.rows.parser;
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class RowsParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -32,7 +29,7 @@ public class RowsParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'\t'"
+			null, "'\\t'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -99,6 +96,7 @@ public class RowsParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class FileContext extends ParserRuleContext {
 		public List<RowContext> row() {
 			return getRuleContexts(RowContext.class);
@@ -160,6 +158,7 @@ public class RowsParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class RowContext extends ParserRuleContext {
 		public int i = 0;
 		public Token STUFF;
@@ -220,12 +219,19 @@ public class RowsParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\5\24\4\2\t\2\4\3"+
-		"\t\3\3\2\3\2\3\2\6\2\n\n\2\r\2\16\2\13\3\3\3\3\6\3\20\n\3\r\3\16\3\21"+
-		"\3\3\2\2\4\2\4\2\2\2\23\2\t\3\2\2\2\4\17\3\2\2\2\6\7\5\4\3\2\7\b\7\4\2"+
-		"\2\b\n\3\2\2\2\t\6\3\2\2\2\n\13\3\2\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f\3"+
-		"\3\2\2\2\r\16\7\5\2\2\16\20\b\3\1\2\17\r\3\2\2\2\20\21\3\2\2\2\21\17\3"+
-		"\2\2\2\21\22\3\2\2\2\22\5\3\2\2\2\4\13\21";
+		"\u0004\u0001\u0003\u0012\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001"+
+		"\u0001\u0000\u0001\u0000\u0001\u0000\u0004\u0000\b\b\u0000\u000b\u0000"+
+		"\f\u0000\t\u0001\u0001\u0001\u0001\u0004\u0001\u000e\b\u0001\u000b\u0001"+
+		"\f\u0001\u000f\u0001\u0001\u0000\u0000\u0002\u0000\u0002\u0000\u0000\u0011"+
+		"\u0000\u0007\u0001\u0000\u0000\u0000\u0002\r\u0001\u0000\u0000\u0000\u0004"+
+		"\u0005\u0003\u0002\u0001\u0000\u0005\u0006\u0005\u0002\u0000\u0000\u0006"+
+		"\b\u0001\u0000\u0000\u0000\u0007\u0004\u0001\u0000\u0000\u0000\b\t\u0001"+
+		"\u0000\u0000\u0000\t\u0007\u0001\u0000\u0000\u0000\t\n\u0001\u0000\u0000"+
+		"\u0000\n\u0001\u0001\u0000\u0000\u0000\u000b\f\u0005\u0003\u0000\u0000"+
+		"\f\u000e\u0006\u0001\uffff\uffff\u0000\r\u000b\u0001\u0000\u0000\u0000"+
+		"\u000e\u000f\u0001\u0000\u0000\u0000\u000f\r\u0001\u0000\u0000\u0000\u000f"+
+		"\u0010\u0001\u0000\u0000\u0000\u0010\u0003\u0001\u0000\u0000\u0000\u0002"+
+		"\t\u000f";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

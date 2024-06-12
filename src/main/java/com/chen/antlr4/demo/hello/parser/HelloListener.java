@@ -1,4 +1,4 @@
-// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo\Hello.g4 by ANTLR 4.7.2
+// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo/Hello.g4 by ANTLR 4.13.1
 package com.chen.antlr4.demo.hello.parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

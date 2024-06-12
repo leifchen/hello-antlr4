@@ -1,20 +1,17 @@
-// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo\Expr.g4 by ANTLR 4.7.2
+// Generated from E:/hello_workspace/hello-antlr4/src/main/resources/antlr/demo/Expr.g4 by ANTLR 4.13.1
 package com.chen.antlr4.demo.expr.parser;
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeVisitor;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue"})
 public class ExprParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.2", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.13.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -94,6 +91,7 @@ public class ExprParser extends Parser {
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ProgContext extends ParserRuleContext {
 		public List<StatContext> stat() {
 			return getRuleContexts(StatContext.class);
@@ -132,7 +130,7 @@ public class ExprParser extends Parser {
 				setState(9); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << ID) | (1L << INT) | (1L << NEWLINE))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & 1796L) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -146,6 +144,7 @@ public class ExprParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class StatContext extends ParserRuleContext {
 		public StatContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -157,6 +156,7 @@ public class ExprParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class BlankContext extends StatContext {
 		public TerminalNode NEWLINE() { return getToken(ExprParser.NEWLINE, 0); }
 		public BlankContext(StatContext ctx) { copyFrom(ctx); }
@@ -166,6 +166,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class PrintExprContext extends StatContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -178,6 +179,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class AssignContext extends StatContext {
 		public TerminalNode ID() { return getToken(ExprParser.ID, 0); }
 		public ExprContext expr() {
@@ -244,6 +246,7 @@ public class ExprParser extends Parser {
 		return _localctx;
 	}
 
+	@SuppressWarnings("CheckReturnValue")
 	public static class ExprContext extends ParserRuleContext {
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -255,6 +258,7 @@ public class ExprParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class ParensContext extends ExprContext {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
@@ -266,6 +270,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class MulDivContext extends ExprContext {
 		public Token op;
 		public List<ExprContext> expr() {
@@ -283,6 +288,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class AddSubContext extends ExprContext {
 		public Token op;
 		public List<ExprContext> expr() {
@@ -300,6 +306,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IdContext extends ExprContext {
 		public TerminalNode ID() { return getToken(ExprParser.ID, 0); }
 		public IdContext(ExprContext ctx) { copyFrom(ctx); }
@@ -309,6 +316,7 @@ public class ExprParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	@SuppressWarnings("CheckReturnValue")
 	public static class IntContext extends ExprContext {
 		public TerminalNode INT() { return getToken(ExprParser.INT, 0); }
 		public IntContext(ExprContext ctx) { copyFrom(ctx); }
@@ -465,19 +473,36 @@ public class ExprParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\r-\4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\3\2\6\2\n\n\2\r\2\16\2\13\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3\3"+
-		"\3\5\3\27\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4 \n\4\3\4\3\4\3\4\3\4\3\4"+
-		"\3\4\7\4(\n\4\f\4\16\4+\13\4\3\4\2\3\6\5\2\4\6\2\4\3\2\6\7\3\2\b\t\2\60"+
-		"\2\t\3\2\2\2\4\26\3\2\2\2\6\37\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3"+
-		"\2\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f\3\3\2\2\2\r\16\5\6\4\2\16\17\7\f\2"+
-		"\2\17\27\3\2\2\2\20\21\7\n\2\2\21\22\7\3\2\2\22\23\5\6\4\2\23\24\7\f\2"+
-		"\2\24\27\3\2\2\2\25\27\7\f\2\2\26\r\3\2\2\2\26\20\3\2\2\2\26\25\3\2\2"+
-		"\2\27\5\3\2\2\2\30\31\b\4\1\2\31 \7\13\2\2\32 \7\n\2\2\33\34\7\4\2\2\34"+
-		"\35\5\6\4\2\35\36\7\5\2\2\36 \3\2\2\2\37\30\3\2\2\2\37\32\3\2\2\2\37\33"+
-		"\3\2\2\2 )\3\2\2\2!\"\f\7\2\2\"#\t\2\2\2#(\5\6\4\b$%\f\6\2\2%&\t\3\2\2"+
-		"&(\5\6\4\7\'!\3\2\2\2\'$\3\2\2\2(+\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*\7\3\2"+
-		"\2\2+)\3\2\2\2\7\13\26\37\')";
+		"\u0004\u0001\u000b+\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0002\u0007\u0002\u0001\u0000\u0004\u0000\b\b\u0000\u000b\u0000\f\u0000"+
+		"\t\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001"+
+		"\u0001\u0001\u0001\u0001\u0001\u0001\u0003\u0001\u0015\b\u0001\u0001\u0002"+
+		"\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
+		"\u0003\u0002\u001e\b\u0002\u0001\u0002\u0001\u0002\u0001\u0002\u0001\u0002"+
+		"\u0001\u0002\u0001\u0002\u0005\u0002&\b\u0002\n\u0002\f\u0002)\t\u0002"+
+		"\u0001\u0002\u0000\u0001\u0004\u0003\u0000\u0002\u0004\u0000\u0002\u0001"+
+		"\u0000\u0004\u0005\u0001\u0000\u0006\u0007.\u0000\u0007\u0001\u0000\u0000"+
+		"\u0000\u0002\u0014\u0001\u0000\u0000\u0000\u0004\u001d\u0001\u0000\u0000"+
+		"\u0000\u0006\b\u0003\u0002\u0001\u0000\u0007\u0006\u0001\u0000\u0000\u0000"+
+		"\b\t\u0001\u0000\u0000\u0000\t\u0007\u0001\u0000\u0000\u0000\t\n\u0001"+
+		"\u0000\u0000\u0000\n\u0001\u0001\u0000\u0000\u0000\u000b\f\u0003\u0004"+
+		"\u0002\u0000\f\r\u0005\n\u0000\u0000\r\u0015\u0001\u0000\u0000\u0000\u000e"+
+		"\u000f\u0005\b\u0000\u0000\u000f\u0010\u0005\u0001\u0000\u0000\u0010\u0011"+
+		"\u0003\u0004\u0002\u0000\u0011\u0012\u0005\n\u0000\u0000\u0012\u0015\u0001"+
+		"\u0000\u0000\u0000\u0013\u0015\u0005\n\u0000\u0000\u0014\u000b\u0001\u0000"+
+		"\u0000\u0000\u0014\u000e\u0001\u0000\u0000\u0000\u0014\u0013\u0001\u0000"+
+		"\u0000\u0000\u0015\u0003\u0001\u0000\u0000\u0000\u0016\u0017\u0006\u0002"+
+		"\uffff\uffff\u0000\u0017\u001e\u0005\t\u0000\u0000\u0018\u001e\u0005\b"+
+		"\u0000\u0000\u0019\u001a\u0005\u0002\u0000\u0000\u001a\u001b\u0003\u0004"+
+		"\u0002\u0000\u001b\u001c\u0005\u0003\u0000\u0000\u001c\u001e\u0001\u0000"+
+		"\u0000\u0000\u001d\u0016\u0001\u0000\u0000\u0000\u001d\u0018\u0001\u0000"+
+		"\u0000\u0000\u001d\u0019\u0001\u0000\u0000\u0000\u001e\'\u0001\u0000\u0000"+
+		"\u0000\u001f \n\u0005\u0000\u0000 !\u0007\u0000\u0000\u0000!&\u0003\u0004"+
+		"\u0002\u0006\"#\n\u0004\u0000\u0000#$\u0007\u0001\u0000\u0000$&\u0003"+
+		"\u0004\u0002\u0005%\u001f\u0001\u0000\u0000\u0000%\"\u0001\u0000\u0000"+
+		"\u0000&)\u0001\u0000\u0000\u0000\'%\u0001\u0000\u0000\u0000\'(\u0001\u0000"+
+		"\u0000\u0000(\u0005\u0001\u0000\u0000\u0000)\'\u0001\u0000\u0000\u0000"+
+		"\u0005\t\u0014\u001d%\'";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
